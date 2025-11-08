@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latech/screens/home.dart';
 import 'sign_up.dart';
 
 class LoginPage extends StatefulWidget {
@@ -24,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 67),
+                const SizedBox(height: 60),
                 const Center(
                   child: Text(
                     'Login',
@@ -36,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
 
-                const SizedBox(height: 120),
+                const SizedBox(height: 170),
 
                 // ---------------- Email Label ----------------
                 Padding(
@@ -115,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: 'Enter your password',
                       hintStyle: const TextStyle(color: Colors.white54),
                       prefixIcon:
-                          const Icon(Icons.lock, color: Colors.white),
+                          const Icon(Icons.password, color: Colors.white),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(4),
@@ -143,21 +144,26 @@ class _LoginPageState extends State<LoginPage> {
 
                 // ---------------- Login Button ----------------
                 ElevatedButton(
-                  onPressed: () {
+                  onPressed: ()  async {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
 
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Logged in successfully!',style: TextStyle(fontSize: 30),),
-                          backgroundColor: Colors.green,
-                        ),
+                        // const SnackBar(
+                        //   content: Text('Logged in successfully!',style: TextStyle(fontSize: 30),),
+                        //   backgroundColor: Colors.green,
+                        // ),
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Home())
+                          )
                       );
                     }
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    fixedSize: const Size(350, 45),
+                    fixedSize: const Size(311, 53),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -209,6 +215,8 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
+                    Icon(Icons.circle, color: Colors.white30, size: 10),
+                    SizedBox(width: 4),
                     Icon(Icons.circle, color: Colors.white30, size: 10),
                     SizedBox(width: 4),
                     Icon(Icons.circle, color: Colors.white30, size: 10),

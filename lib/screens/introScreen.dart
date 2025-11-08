@@ -25,7 +25,7 @@ class IntroScreen extends StatelessWidget {
             ),
           ),
 
-          // 🧍 Main content (same as your code)
+          // const SizedBox(height: 500),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -38,16 +38,13 @@ class IntroScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 20),
+                // const SizedBox(height: 130),
                 const Text(
                   'Sales all the time',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
                 const SizedBox(height: 20),
-                // const Text(
-                //   '. . .',
-                //   style: TextStyle(color: Colors.white, fontSize: 20),
-                // ),
+
                 Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -64,15 +61,10 @@ class IntroScreen extends StatelessWidget {
                   
                 ],
               ),
+
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    // Navigator.pushNamed(context, '/logi');
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Home()),
-                    // );
-
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => LoginScreen()),

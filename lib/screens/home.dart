@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:latech/screens/account.dart';
+import 'package:latech/screens/addedToCartScreen.dart';
 import 'package:latech/screens/categories.dart';
+import 'package:latech/screens/search.dart';
+import 'package:material_symbols_icons/symbols.dart';
+import 'package:iconsax/iconsax.dart';
+// import 'package:icons_plus/icons_plus.dart' hide Iconsax;
 
 class Home extends StatefulWidget {
   const Home ({super.key});
@@ -28,6 +34,11 @@ class _HomeState extends State<Home> {
       "subtitle": "Go 3",
       "image": "assets/images/Bosespeaker.png"
     },
+    {
+      "title": "JBL Portable",
+      "subtitle": "Go 3",
+      "image": "assets/images/Bosespeaker.png"
+    }
   ];
 
   @override
@@ -36,8 +47,14 @@ class _HomeState extends State<Home> {
       backgroundColor: Color(0xffFDFEFF),
       //  AppBar
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text("Home"),
         backgroundColor: const Color(0xffFDFEFF),
+        titleTextStyle: TextStyle(
+          fontSize: 32, 
+          color: Colors.black,
+          fontWeight:FontWeight.bold,
+        ),
       ),
 
       body: SingleChildScrollView(
@@ -280,6 +297,7 @@ class _HomeState extends State<Home> {
                       Text("Mobiles"),
                     ],
                   ),
+                  SizedBox(width: 16),
                 ],
               ),
             ),
@@ -289,7 +307,7 @@ class _HomeState extends State<Home> {
             //  Sales Title
             Text(
               "Sales",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
 
             SizedBox(height: 20),
@@ -532,17 +550,39 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xffEFF5FB),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF0001FC), //0xFF5A5CE0  // 0xFF0001FC
+        selectedItemColor: const Color(0xFF0001FC),
         unselectedItemColor: Colors.grey,
-        items: [
+        onTap: (index) {
+          if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Search()),
+            );
+          } else if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AddedToCartScreen()),
+            );
+          } else if (index == 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AccountPage()),
+            );
+          }
+        },
+        items:  [
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.home_outline), label: ''),
+            icon: Icon(Iconsax.home), label: '',
+          ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.search_outline), label: ''),
+            icon: Icon(Ionicons.search_outline), label: '',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Ionicons.cart_outline), label: ''),
+            icon: Icon(Ionicons.cart_outline), label: '',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Ionicons.person_outline), label: ''),
+            icon: Icon(Ionicons.person_outline), label: '',
+          ),
         ],
       ),
     );

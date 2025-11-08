@@ -169,10 +169,10 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 30),
 
                 Padding(
-              padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Home()),
                       );

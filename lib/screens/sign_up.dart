@@ -26,7 +26,7 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 67),
+                const SizedBox(height: 60),
                 const Text(
                   'Create an account',
                   style: TextStyle(
@@ -36,8 +36,8 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
 
-                const SizedBox(height: 60),
-                // الاسم الكامل
+                const SizedBox(height: 150),
+                // full name
                 Padding(
                   padding: const EdgeInsets.only(left: 65, bottom: 8),
                   child: Align(
@@ -59,6 +59,7 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration(
                       hintText: 'Enter your full name',
                       hintStyle: const TextStyle(color: Colors.white54),
+                      prefixIcon: const Icon(Icons.person, color: Colors.white),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(4),
@@ -79,7 +80,7 @@ class _SignUpState extends State<SignUp> {
                 ),
 
                 const SizedBox(height: 24),
-                // البريد الإلكتروني
+                //email
                 Padding(
                   padding: const EdgeInsets.only(left: 65, bottom: 8),
                   child: Align(
@@ -101,6 +102,7 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration(
                       hintText: 'Enter your email',
                       hintStyle: const TextStyle(color: Colors.white54),
+                      prefixIcon: const Icon(Icons.email, color: Colors.white),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(4),
@@ -125,7 +127,7 @@ class _SignUpState extends State<SignUp> {
                 ),
 
                 const SizedBox(height: 24),
-                // كلمة المرور
+                // pass
                 Padding(
                   padding: const EdgeInsets.only(left: 65, bottom: 8),
                   child: Align(
@@ -148,6 +150,7 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration(
                       hintText: 'Enter your password',
                       hintStyle: const TextStyle(color: Colors.white54),
+                      prefixIcon: const Icon(Icons.password, color: Colors.white),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(4),
@@ -171,7 +174,7 @@ class _SignUpState extends State<SignUp> {
                 ),
 
                 const SizedBox(height: 32),
-                // زر التحقق
+                // validate
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
@@ -184,7 +187,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                       );
 
-                      // الانتقال لصفحة تسجيل الدخول
+                      // go to login
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -195,7 +198,7 @@ class _SignUpState extends State<SignUp> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    fixedSize: const Size(350, 45),
+                    fixedSize: const Size(311, 53),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -236,6 +239,22 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                     ),
+                  ],
+                ),
+
+                const SizedBox(height: 40),
+
+                // ---------------- Page Indicator ----------------
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.circle, color: Colors.white30, size: 10),
+                    SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.white30, size: 10),
+                    SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.white30, size: 10),
+                    SizedBox(width: 4),
+                    Icon(Icons.circle, color: Colors.white, size: 12),
                   ],
                 ),
 

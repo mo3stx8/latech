@@ -9,6 +9,7 @@ class Search extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0,
         title: const Text(
@@ -216,7 +217,7 @@ class Search extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Ionicons.home_outline), label: ''),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.search_outline), label: 'g'),
+            icon: Icon(Ionicons.search_outline), label: ''),
           BottomNavigationBarItem(
               icon: Icon(Ionicons.cart_outline), label: ''),
           BottomNavigationBarItem(
