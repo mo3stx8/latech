@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:latech/screens/checkoutScreen.dart';
+import 'package:latech/widgets/custom_bottom_nav.dart';
 
 // class ProductPage extends StatelessWidget {
 //   const ProductPage({super.key});
@@ -21,14 +23,11 @@ class _ProductPageState extends State<ProductPage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: Icon(Icons.arrow_back, color: Colors.black),
+        automaticallyImplyLeading: true,
         centerTitle: false,
         title: Text(
           "MacBook Pro",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
 
@@ -58,10 +57,7 @@ class _ProductPageState extends State<ProductPage> {
 
             // Product image
             Center(
-              child: Image.asset(
-                'assets/images/macbook.jpeg',
-                height: 150,
-              ),
+              child: Image.asset('assets/images/macbook.jpeg', height: 150),
             ),
 
             SizedBox(height: 20),
@@ -70,11 +66,7 @@ class _ProductPageState extends State<ProductPage> {
             Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  buildDot(true),
-                  buildDot(false),
-                  buildDot(false),
-                ],
+                children: [buildDot(true), buildDot(false), buildDot(false)],
               ),
             ),
 
@@ -111,7 +103,7 @@ class _ProductPageState extends State<ProductPage> {
                 buildCapacity(1, "256 GB"),
                 SizedBox(width: 15),
                 buildCapacity(2, "512 GB"),
-                SizedBox(width: 15,),
+                SizedBox(width: 15),
                 // buildCapacity(3, "1 TB"),
               ],
             ),
@@ -122,7 +114,12 @@ class _ProductPageState extends State<ProductPage> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => CheckoutScreen()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xff1F53E4),
                   padding: EdgeInsets.symmetric(vertical: 16),
@@ -140,24 +137,8 @@ class _ProductPageState extends State<ProductPage> {
         ),
       ),
 
-      // Bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 1,
-        selectedItemColor: Colors.purple,
-        unselectedItemColor: Colors.grey,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.home_outline), label: ''),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.search_outline), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Ionicons.cart_outline), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Ionicons.person_outline), label: ''),
-        ],
-      ),
+      //  Bottom Navigation Bar
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 2),
     );
   }
 
@@ -193,10 +174,7 @@ class _ProductPageState extends State<ProductPage> {
             width: 2,
           ),
         ),
-        child: CircleAvatar(
-          radius: 14,
-          backgroundColor: color,
-        ),
+        child: CircleAvatar(radius: 14, backgroundColor: color),
       ),
     );
   }

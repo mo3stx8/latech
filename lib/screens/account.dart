@@ -1,4 +1,5 @@
 import 'package:ionicons/ionicons.dart';
+import 'package:latech/widgets/custom_bottom_nav.dart';
 
 // import 'package:iconsax/iconsax.dart';
 // import 'package:icons_plus/icons_plus.dart';
@@ -18,25 +19,9 @@ class _AccountPageState extends State<AccountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFEFF5FB),
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color(0xFF0001FC),
-        unselectedItemColor: Colors.grey,
-        currentIndex: selectedIndex,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Ionicons.home_outline), label: ""),
-          BottomNavigationBarItem(icon: Icon(Ionicons.search_outline), label: ""),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.cart_outline),
-            label: "",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.person_outline),
-            label: "",
-          ),
-        ],
-      ),
+      //  Bottom Navigation Bar
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 3),
+
       backgroundColor: Color(0xFFFDFEFF),
       body: SafeArea(
         child: Column(

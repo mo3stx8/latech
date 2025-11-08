@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:latech/widgets/custom_bottom_nav.dart';
 import 'account.dart';
 
 class Account_information extends StatefulWidget {
@@ -13,25 +14,9 @@ class _Account_informationState extends State<Account_information> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFEFF5FB),
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Color(0xFF0001FC),
-        unselectedItemColor: Colors.grey,
-        currentIndex: 3,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Ionicons.home_outline), label: ""),
-          BottomNavigationBarItem(icon: Icon(Ionicons.search_outline), label: ""),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.cart_outline),
-            label: "",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.person_outline),
-            label: "",
-          ),
-        ],
-      ),
+      //  Bottom Navigation Bar
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 3),
+
       backgroundColor: Color(0xFFF6F7F8),
       body: SafeArea(
         child: Column(

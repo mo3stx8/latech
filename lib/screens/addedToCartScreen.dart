@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:latech/screens/introScreen.dart';
 import 'package:latech/screens/productPage.dart';
+import 'package:latech/widgets/custom_bottom_nav.dart';
 
 class AddedToCartScreen extends StatelessWidget {
   const AddedToCartScreen({super.key});
@@ -78,25 +79,9 @@ class AddedToCartScreen extends StatelessWidget {
       
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFF2E0FD8),
-        backgroundColor: Color(0xffEFF5FB),
-        type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Colors.black54,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        currentIndex: 1,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.home_outline), label: ''),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.search_outline), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Ionicons.cart_outline), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Ionicons.person_outline), label: ''),
-        ],
-      ),
+
+      //  Bottom Navigation Bar
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 2),
     );
   }
 }

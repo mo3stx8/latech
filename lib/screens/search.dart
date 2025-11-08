@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart'; // add in pubspec.yaml: ionicons: ^0.2.2
+import 'package:ionicons/ionicons.dart';
+import 'package:latech/screens/account.dart';
+import 'package:latech/screens/addedToCartScreen.dart';
+import 'package:latech/widgets/custom_bottom_nav.dart'; // add in pubspec.yaml: ionicons: ^0.2.2
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -206,24 +209,8 @@ class Search extends StatelessWidget {
         ),
       ),
 
-      // Bottom navigation bar
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xffEFF5FB),
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF5A5CE0),
-        unselectedItemColor: Colors.grey,
-        currentIndex: 1,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.home_outline), label: ''),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.search_outline), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Ionicons.cart_outline), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(Ionicons.person_outline), label: ''),
-        ],
-      ),
+        //  Bottom Navigation Bar
+        bottomNavigationBar: const CustomBottomNav(currentIndex: 1),
     );
   }
 }

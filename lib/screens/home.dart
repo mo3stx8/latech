@@ -4,6 +4,7 @@ import 'package:latech/screens/account.dart';
 import 'package:latech/screens/addedToCartScreen.dart';
 import 'package:latech/screens/categories.dart';
 import 'package:latech/screens/search.dart';
+import 'package:latech/widgets/custom_bottom_nav.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:iconsax/iconsax.dart';
 // import 'package:icons_plus/icons_plus.dart' hide Iconsax;
@@ -547,44 +548,7 @@ class _HomeState extends State<Home> {
       ),
 
       //  Bottom Navigation Bar
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xffEFF5FB),
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF0001FC),
-        unselectedItemColor: Colors.grey,
-        onTap: (index) {
-          if (index == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Search()),
-            );
-          } else if (index == 2) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => AddedToCartScreen()),
-            );
-          } else if (index == 3) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => AccountPage()),
-            );
-          }
-        },
-        items:  [
-          BottomNavigationBarItem(
-            icon: Icon(Iconsax.home), label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.search_outline), label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.cart_outline), label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Ionicons.person_outline), label: '',
-          ),
-        ],
-      ),
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 0),
     );
   }
 }
