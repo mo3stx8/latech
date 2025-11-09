@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latech/screens/home.dart';
 import 'log_in.dart';
 
 class SignUp extends StatefulWidget {
@@ -264,7 +265,7 @@ class _SignUpState extends State<SignUp> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const LoginPage()),
+                          builder: (context) => const Home()),
                     );
                   },
                   child: const Text(
