@@ -71,8 +71,6 @@ class _HomeState extends State<Home> {
             },
           ),
         ],
-
-        
       ),
 
       drawer: const GlassDrawer(),

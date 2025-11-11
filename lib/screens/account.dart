@@ -1,5 +1,6 @@
 import 'package:ionicons/ionicons.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
+import 'package:latech/widgets/glass_drawer.dart';
 
 // import 'package:iconsax/iconsax.dart';
 // import 'package:icons_plus/icons_plus.dart';
@@ -19,26 +20,48 @@ class _AccountPageState extends State<AccountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //  Bottom Navigation Bar
-      bottomNavigationBar: const CustomBottomNav(currentIndex: 3),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text("Account"),
+        backgroundColor: const Color(0xffFDFEFF),
+        titleTextStyle: TextStyle(
+          fontSize: 32, 
+          color: Colors.black,
+          fontWeight:FontWeight.bold,
+        ),
 
+        actions: [
+          Builder(
+            builder: (context) {
+              return IconButton(
+                icon: const Icon(Icons.menu, color: Colors.black, size: 30),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer(); // Open from right
+                },
+              );
+            },
+          ),
+        ],
+      ),
+
+      drawer: const GlassDrawer(),
       backgroundColor: Color(0xFFFDFEFF),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
 
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 24, 0, 0),
-              child: Text(
-                'Account',
-                style: TextStyle(
-                  color: Color(0xFF0A1034),
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.fromLTRB(16, 24, 0, 0),
+            //   child: Text(
+            //     'Account',
+            //     style: TextStyle(
+            //       color: Color(0xFF0A1034),
+            //       fontSize: 32,
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.fromLTRB(32.0, 24.0, 0, 0),
               child: SizedBox(
@@ -98,6 +121,8 @@ class _AccountPageState extends State<AccountPage> {
           ],
         ),
       ),
+      //  Bottom Navigation Bar
+      bottomNavigationBar: const CustomBottomNav(currentIndex: 3),
     );
   }
 }
