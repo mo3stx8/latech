@@ -3,8 +3,10 @@ import 'package:ionicons/ionicons.dart';
 import 'package:latech/screens/account.dart';
 import 'package:latech/screens/addedToCartScreen.dart';
 import 'package:latech/screens/categories.dart';
+import 'package:latech/screens/laptopApp.dart';
 import 'package:latech/screens/search.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
+import 'package:latech/widgets/glass_drawer.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:iconsax/iconsax.dart';
 // import 'package:icons_plus/icons_plus.dart' hide Iconsax;
@@ -56,7 +58,24 @@ class _HomeState extends State<Home> {
           color: Colors.black,
           fontWeight:FontWeight.bold,
         ),
+
+        actions: [
+          Builder(
+            builder: (context) {
+              return IconButton(
+                icon: const Icon(Icons.menu, color: Colors.black, size: 30),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer(); // Open from right
+                },
+              );
+            },
+          ),
+        ],
+
+        
       ),
+
+      drawer: const GlassDrawer(),
 
       body: SingleChildScrollView(
         child: Column(
@@ -255,8 +274,7 @@ class _HomeState extends State<Home> {
                       InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-                        
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => ElectronicsPage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LaptopApp()));
                         },
                         child: Container(
                           padding: EdgeInsets.all(10),

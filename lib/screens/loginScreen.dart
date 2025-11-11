@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:latech/screens/home.dart';
 import 'package:latech/screens/log_in.dart';
 import 'package:latech/screens/sign_up.dart';

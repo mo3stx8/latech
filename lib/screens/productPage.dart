@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:latech/screens/checkoutScreen.dart';
+import 'package:latech/screens/addedToCartScreen.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 
-// class ProductPage extends StatelessWidget {
-//   const ProductPage({super.key});
-
 class ProductPage extends StatefulWidget {
+  const ProductPage({super.key});
+
   @override
   _ProductPageState createState() => _ProductPageState();
 }
@@ -14,24 +13,34 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   int selectedColor = 1;
   int selectedCapacity = 0;
+  int currentPage = 0;
+
+  final PageController _pageController = PageController();
+
+  final List<String> productImages = [
+    'assets/images/macbook.jpeg',
+    'assets/images/Macbook.png',
+    'assets/images/macbook.jpeg',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // App bar with back arrow
+
+      // ✅ App bar
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: true,
         centerTitle: false,
-        title: Text(
-          "MacBook Pro",
+        title: const Text(
+          "MacBook Pro 13",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
       ),
 
-      // Body part
+      // ✅ Main Body
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
@@ -39,12 +48,12 @@ class _ProductPageState extends State<ProductPage> {
           children: [
             // "New" label
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               decoration: BoxDecoration(
                 color: Colors.purple.shade50,
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: Text(
+              child: const Text(
                 "New",
                 style: TextStyle(
                   color: Color(0xff0A1034),
@@ -53,31 +62,58 @@ class _ProductPageState extends State<ProductPage> {
               ),
             ),
 
-            SizedBox(height: 30),
+            const SizedBox(height: 20),
 
-            // Product image
-            Center(
-              child: Image.asset('assets/images/macbook.jpeg', height: 150),
-            ),
-
-            SizedBox(height: 20),
-
-            // Dots (for images)
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [buildDot(true), buildDot(false), buildDot(false)],
+            // ✅ Image Banner (carousel)
+            SizedBox(
+              height: 200,
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: productImages.length,
+                onPageChanged: (index) {
+                  setState(() => currentPage = index);
+                },
+                itemBuilder: (context, index) {
+                  return AnimatedBuilder(
+                    animation: _pageController,
+                    builder: (context, child) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.asset(
+                            productImages[index],
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
               ),
             ),
 
-            SizedBox(height: 30),
+            const SizedBox(height: 12),
 
-            // Color options
-            Text(
+            // ✅ Dynamic dot indicators
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  productImages.length,
+                  (index) => buildDot(index == currentPage),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 30),
+
+            // ✅ Color options
+            const Text(
               "Color",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -87,47 +123,45 @@ class _ProductPageState extends State<ProductPage> {
               ],
             ),
 
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
 
-            // Capacity options
-            Text(
+            // ✅ Capacity options
+            const Text(
               "Capacity",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 buildCapacity(0, "64 GB"),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 buildCapacity(1, "256 GB"),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 buildCapacity(2, "512 GB"),
-                SizedBox(width: 15),
-                // buildCapacity(3, "1 TB"),
               ],
             ),
 
-            Spacer(),
+            const Spacer(),
 
-            // Add to cart button
+            // ✅ Add to cart button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => CheckoutScreen()),
+                    MaterialPageRoute(builder: (context) => const AddedToCartScreen()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff1F53E4),
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                  backgroundColor: const Color(0xff1F53E4),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   "Add to cart",
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
@@ -137,25 +171,26 @@ class _ProductPageState extends State<ProductPage> {
         ),
       ),
 
-      //  Bottom Navigation Bar
+      // ✅ Bottom Navigation Bar
       bottomNavigationBar: const CustomBottomNav(currentIndex: 2),
     );
   }
 
-  // dot indicator
+  // ✅ Dot indicator
   Widget buildDot(bool active) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 3),
-      width: 8,
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       height: 8,
+      width: active ? 16 : 8,
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
         color: active ? Colors.purple : Colors.grey.shade300,
+        borderRadius: BorderRadius.circular(4),
       ),
     );
   }
 
-  // color selector circle
+  // ✅ Color selector circle
   Widget buildColorCircle(int index, Color color) {
     bool isSelected = selectedColor == index;
     return GestureDetector(
@@ -165,8 +200,8 @@ class _ProductPageState extends State<ProductPage> {
         });
       },
       child: Container(
-        margin: EdgeInsets.only(right: 15),
-        padding: EdgeInsets.all(3),
+        margin: const EdgeInsets.only(right: 15),
+        padding: const EdgeInsets.all(3),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(
@@ -179,7 +214,7 @@ class _ProductPageState extends State<ProductPage> {
     );
   }
 
-  // capacity buttons
+  // ✅ Capacity buttons
   Widget buildCapacity(int index, String text) {
     bool isSelected = selectedCapacity == index;
     return GestureDetector(

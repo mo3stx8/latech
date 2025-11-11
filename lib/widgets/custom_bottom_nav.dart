@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:latech/screens/account.dart';
-import 'package:latech/screens/addedToCartScreen.dart';
+import 'package:latech/screens/laptopApp.dart';
 import '../screens/home.dart';
 import '../screens/search.dart';
 
@@ -32,7 +32,7 @@ class CustomBottomNav extends StatelessWidget {
         } else if (index == 2 && currentIndex != 2) {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const AddedToCartScreen()),
+            MaterialPageRoute(builder: (context) => const LaptopApp()),
           );
         } else if (index == 3 && currentIndex != 3) {
           Navigator.pushReplacement(

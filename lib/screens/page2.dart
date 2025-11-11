@@ -37,12 +37,11 @@ class Page2 extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  
-                  Icon(Icons.circle, size: 10, color: Colors.grey),
-                  SizedBox(width: 4),
                   Icon(Icons.circle,
                       size: 10,
                       color: const Color.fromARGB(255, 250, 250, 252)),
+                  SizedBox(width: 4),
+                  Icon(Icons.circle, size: 10, color: Colors.grey),
                   SizedBox(width: 4),
                   Icon(Icons.circle, size: 10, color: Colors.grey),
                   SizedBox(width: 4),
@@ -56,9 +55,9 @@ class Page2 extends StatelessWidget {
                   height: 40,
                   minWidth: 100,
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => IntroScreen()),
+                      MaterialPageRoute(builder: (context) => Page3()),
                     );
                   },
                   child: Text(

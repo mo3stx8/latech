@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:latech/screens/home.dart';
 import 'package:latech/screens/loginScreen.dart';
-import 'package:latech/screens/search.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});

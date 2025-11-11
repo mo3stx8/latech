@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:latech/screens/home.dart';
+import 'package:latech/screens/laptopApp.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 
 class Categories extends StatefulWidget {
@@ -79,20 +80,28 @@ class _CategoriesState extends State<Categories> {
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
-                      child: Container(
-                        height: 77,
-                        width: 375,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(24.5, 28, 0, 0),
-                          child: Text(
-                            'Computers',
-                            style: TextStyle(
-                              color: Color(0xFF0A1034),
-                              fontSize: 18,
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LaptopApp()),
+                          );
+                        },
+                        child: Container(
+                          height: 77,
+                          width: 375,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(24.5, 28, 0, 0),
+                            child: Text(
+                              'Computers',
+                              style: TextStyle(
+                                color: Color(0xFF0A1034),
+                                fontSize: 18,
+                              ),
                             ),
                           ),
                         ),

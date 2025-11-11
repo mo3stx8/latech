@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:latech/screens/home.dart';
+import 'package:latech/screens/lets_start.dart';
 import 'package:latech/screens/page3.dart';
 import 'package:flutter/material.dart';
 // استدعاء الشاشة اللي تبي تفتح بعدها
@@ -21,7 +22,7 @@ class _SplashscreenState extends State<Splashscreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => Page3()), //الصفحه الي هينتقل عليها
+            builder: (context) => LetsStart()), //الصفحه الي هينتقل عليها
       );
     });
   }
