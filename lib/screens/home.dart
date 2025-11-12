@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
-import 'package:latech/screens/account.dart';
-import 'package:latech/screens/addedToCartScreen.dart';
 import 'package:latech/screens/categories.dart';
 import 'package:latech/screens/laptopApp.dart';
-import 'package:latech/screens/search.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 import 'package:latech/widgets/glass_drawer.dart';
-import 'package:material_symbols_icons/symbols.dart';
-import 'package:iconsax/iconsax.dart';
 // import 'package:icons_plus/icons_plus.dart' hide Iconsax;
 
 class Home extends StatefulWidget {

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:latech/screens/home.dart';
 import 'package:latech/screens/loginScreen.dart';
 import 'package:latech/screens/page2.dart';
-import 'package:latech/screens/sign_up.dart';
 
 class LetsStart extends StatefulWidget {
   const LetsStart({super.key});

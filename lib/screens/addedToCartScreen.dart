@@ -1,11 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:latech/screens/checkoutScreen.dart';
-import 'package:latech/screens/introScreen.dart';
 import 'package:latech/screens/laptopApp.dart';
-import 'package:latech/screens/productPage.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 
 class AddedToCartScreen extends StatelessWidget {

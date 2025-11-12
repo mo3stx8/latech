@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 import 'account.dart';
 

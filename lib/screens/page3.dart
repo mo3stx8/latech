@@ -1,5 +1,4 @@
 import 'package:latech/screens/introScreen.dart';
-import 'package:latech/screens/page2.dart';
 import 'package:flutter/material.dart';
 
 class Page3 extends StatelessWidget {

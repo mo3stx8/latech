@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:latech/screens/account.dart';
-import 'package:latech/screens/addedToCartScreen.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart'; // add in pubspec.yaml: ionicons: ^0.2.2
 
 class Search extends StatelessWidget {
