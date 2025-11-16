@@ -49,13 +49,13 @@ class _ProductPageState extends State<ProductPage> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               decoration: BoxDecoration(
-                color: Colors.purple.shade50,
+                color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(6),
               ),
               child: const Text(
                 "New",
                 style: TextStyle(
-                  color: Color(0xff0A1034),
+                  color: Color(0xFF0001FC),
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -154,7 +154,7 @@ class _ProductPageState extends State<ProductPage> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff1F53E4),
+                  backgroundColor: const Color(0xFF0001FC),
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -183,7 +183,7 @@ class _ProductPageState extends State<ProductPage> {
       height: 8,
       width: active ? 16 : 8,
       decoration: BoxDecoration(
-        color: active ? Colors.purple : Colors.grey.shade300,
+        color: active ? Color(0xFF0001FC) : Colors.grey.shade300,
         borderRadius: BorderRadius.circular(4),
       ),
     );
@@ -225,7 +225,7 @@ class _ProductPageState extends State<ProductPage> {
       child: Text(
         text,
         style: TextStyle(
-          color: isSelected ? Colors.purple : Colors.grey,
+          color: isSelected ? Color(0xFF0001FC) : Colors.grey,
           fontWeight: FontWeight.bold,
           fontSize: 16,
         ),

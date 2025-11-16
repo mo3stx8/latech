@@ -103,7 +103,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
                       width: 40,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: Colors.grey[400],
+                        color: Color(0xFF0001FC),
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
@@ -139,6 +139,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
                     min: 800,
                     max: 1500,
                     divisions: 7,
+                    activeColor:Color(0xFF0001FC),
                     labels: RangeLabels(
                       "\$${selectedPriceRange.start.round()}",
                       "\$${selectedPriceRange.end.round()}",
@@ -156,7 +157,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
                       applyFilters();
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.deepPurple,
+                      backgroundColor: Color(0xFF0001FC),
                       minimumSize: const Size(double.infinity, 45),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -192,7 +193,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffFDFEFF),
         elevation: 0,
         title: Text(
           'Laptop',
@@ -267,7 +268,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
                   },
                   child: Icon(
                     isGridView ? Icons.grid_view : Icons.view_agenda,
-                    color: Colors.deepPurple,
+                    color: Color(0xFF0001FC),
                   ),
                 ),
               ],
@@ -354,7 +355,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
                             style: GoogleFonts.poppins(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
-                              color: Colors.deepPurple,
+                              color: Color(0xFF0001FC),
                             ),
                           ),
                         ],
@@ -380,7 +381,7 @@ class _LaptopScreenState extends State<LaptopScreen> {
                       style: GoogleFonts.poppins(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
-                        color: Colors.deepPurple,
+                        color: Color(0xFF0001FC),
                       ),
                     ),
                   ],

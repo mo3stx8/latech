@@ -7,7 +7,6 @@ class CheckoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color.fromARGB(255, 239, 238, 240),//0xff0001FC his
       backgroundColor: const Color(0xffFDFEFF),
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -19,7 +18,6 @@ class CheckoutScreen extends StatelessWidget {
             fontSize: 26,
           ),
         ),
-        // backgroundColor: Color.fromARGB(255, 239, 238, 240),
         backgroundColor: const Color(0xffFDFEFF),
         elevation: 0,
         centerTitle: false,
@@ -46,29 +44,6 @@ class CheckoutScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 15),
-                  // Row(
-                  //   children: [
-                  //     _buildProductCard(
-                  //       'assets/images/cpu.jpg',
-                  //       'CPU',
-                  //       '-20%',
-                  //     ),
-                  //     const SizedBox(width: 15),
-                  //     _buildProductCard('assets/images/rtx.jpeg', 'RTX', '-30%'),
-                  //   ],
-                  // ),
-                  // const SizedBox(height: 15),
-                  // Row(
-                  //   children: [
-                  //     _buildProductCard(
-                  //       'assets/images/cpu.jpg',
-                  //       'CPU',
-                  //       '-20%',
-                  //     ),
-                  //     const SizedBox(width: 15),
-                  //     _buildProductCard('assets/images/rtx.jpeg', 'RTX', '-30%'),
-                  //   ],
-                  // ),
                 ],
               ),
               // const SizedBox(height: 90),
@@ -151,47 +126,6 @@ class CheckoutScreen extends StatelessWidget {
       bottomNavigationBar: const CustomBottomNav(currentIndex: 2),
     );
   }
-
-  //   Widget _buildProductCard() { // one photo
-  //     return Expanded(
-  //       child: Container(
-  //         decoration: BoxDecoration(
-  //           color: Colors.white,
-  //           borderRadius: BorderRadius.circular(12),
-  //           boxShadow: [BoxShadow(color: Colors.grey.shade300, blurRadius: 6)],
-  //         ),
-  //         padding: const EdgeInsets.all(10),
-  //         child: Column(
-  //           children: [
-  //             Stack(
-  //               children: [
-  //                 Image.asset('assets/images/monitors.jpeg', height: 105),
-  //                 Positioned(
-  //                   top: 8,
-  //                   left: 8,
-  //                   child: Container(
-  //                     padding:
-  //                     const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-  //                     decoration: BoxDecoration(
-  //                       color: Colors.blue,
-  //                       borderRadius: BorderRadius.circular(4),
-  //                     ),
-  //                     child: const Text(
-  //                       '-50%',
-  //                       style: TextStyle(color: Colors.white, fontSize: 12),
-  //                     ),
-  //                   ),
-  //                 ),
-  //               ],
-  //             ),
-  //             const SizedBox(height: 10),
-  //             const Text('Monitors')
-  //           ],
-  //         ),
-  //       ),
-  //     );
-  //   }
-  // }
 
 // multi photo and customized
   Widget _buildProductCard(String imagePath, String title, String discount) {

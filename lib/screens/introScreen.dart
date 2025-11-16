@@ -16,10 +16,10 @@ class IntroScreen extends StatelessWidget {
             top: 90,
             right: -150,
             child: Image.asset(
-              'assets/images/Vector.png', // make sure to put your bubble image in assets folder
+              'assets/images/Vector.png', 
               width: 600,
               height: 600,
-              // color: Color(0xFF0001FC)//.withOpacity(0.90), // faint effect like your image
+              // color: Color(0xFF0001FC) // faint effect like your image
             ),
           ),
 

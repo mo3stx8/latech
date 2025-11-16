@@ -9,10 +9,8 @@ class Page2 extends StatelessWidget {
     return Scaffold(
         backgroundColor: const Color(0xFF0001FC),
         body: Container(
-          // padding: EdgeInsets.all(10),
           alignment: AlignmentDirectional.center,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: EdgeInsets.only(

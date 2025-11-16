@@ -151,7 +151,7 @@ class _SignUpState extends State<SignUp> {
                     decoration: InputDecoration(
                       hintText: 'Enter your password',
                       hintStyle: const TextStyle(color: Colors.white54),
-                      prefixIcon: const Icon(Icons.password, color: Colors.white),
+                      prefixIcon: const Icon(Icons.lock, color: Colors.white),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(4),

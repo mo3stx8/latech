@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:latech/widgets/custom_bottom_nav.dart'; // add in pubspec.yaml: ionicons: ^0.2.2
+import 'package:latech/widgets/custom_bottom_nav.dart'; 
 
 class Search extends StatelessWidget {
   const Search({super.key});

@@ -12,7 +12,6 @@ class Page3 extends StatelessWidget {
           padding: EdgeInsets.all(10),
           alignment: AlignmentDirectional.center,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: EdgeInsets.only(
@@ -52,11 +51,6 @@ class Page3 extends StatelessWidget {
                   height: 40,
                   minWidth: 100,
                   onPressed: () {
-                    //يفتح الصفحه الي بعدها ويخلي هاذي شغال في الخلفيه
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Page2()),
-                    // );
                     //يفتح الصفحه الي بعدها ويغلق الصفحه الحاليه
                     Navigator.pushReplacement(
                       context,

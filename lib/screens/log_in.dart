@@ -116,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: 'Enter your password',
                       hintStyle: const TextStyle(color: Colors.white54),
                       prefixIcon:
-                          const Icon(Icons.password, color: Colors.white),
+                          const Icon(Icons.lock, color: Colors.white),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(4),

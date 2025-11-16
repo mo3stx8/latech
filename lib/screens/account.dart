@@ -1,9 +1,5 @@
-import 'package:ionicons/ionicons.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 import 'package:latech/widgets/glass_drawer.dart';
-
-// import 'package:iconsax/iconsax.dart';
-// import 'package:icons_plus/icons_plus.dart';
 import 'account_information.dart';
 
 import 'package:flutter/material.dart';
@@ -51,17 +47,6 @@ class _AccountPageState extends State<AccountPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
 
           children: [
-            // Padding(
-            //   padding: const EdgeInsets.fromLTRB(16, 24, 0, 0),
-            //   child: Text(
-            //     'Account',
-            //     style: TextStyle(
-            //       color: Color(0xFF0A1034),
-            //       fontSize: 32,
-            //       fontWeight: FontWeight.bold,
-            //     ),
-            //   ),
-            // ),
             Padding(
               padding: const EdgeInsets.fromLTRB(32.0, 24.0, 0, 0),
               child: SizedBox(

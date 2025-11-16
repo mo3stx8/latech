@@ -89,17 +89,8 @@ class AddedToCartScreen extends StatelessWidget {
               ],
             ),
           ),
-
-          // blur layer
-          // BackdropFilter(
-          //   filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
-          //   child: Container(
-          //     color: Colors.white.withOpacity(0.1),
-          //   ),
-          // ),
         ],
       ),
-
       //  Bottom Navigation Bar
       bottomNavigationBar: const CustomBottomNav(currentIndex: 2),
     );
