@@ -212,18 +212,18 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 50),
 
                 // ---------------- Page Indicator ----------------
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(Icons.circle, color: Colors.white30, size: 10),
-                    SizedBox(width: 4),
-                    Icon(Icons.circle, color: Colors.white30, size: 10),
-                    SizedBox(width: 4),
-                    Icon(Icons.circle, color: Colors.white30, size: 10),
-                    SizedBox(width: 4),
-                    Icon(Icons.circle, color: Colors.white, size: 12),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: const [
+                //     Icon(Icons.circle, color: Colors.white30, size: 10),
+                //     SizedBox(width: 4),
+                //     Icon(Icons.circle, color: Colors.white30, size: 10),
+                //     SizedBox(width: 4),
+                //     Icon(Icons.circle, color: Colors.white30, size: 10),
+                //     SizedBox(width: 4),
+                //     Icon(Icons.circle, color: Colors.white, size: 12),
+                //   ],
+                // ),
 
                 const SizedBox(height: 40),
 

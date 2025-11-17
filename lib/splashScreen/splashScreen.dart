@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:latech/screens/lets_start.dart';
 import 'package:flutter/material.dart';
+import 'package:latech/screens/onboarding_slider.dart';
 // استدعاء الشاشة اللي تبي تفتح بعدها
 
 class Splashscreen extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SplashscreenState extends State<Splashscreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => LetsStart()), //الصفحه الي هينتقل عليها
+            builder: (context) => OnboardingSlider()), //الصفحه الي هينتقل عليها
       );
     });
   }

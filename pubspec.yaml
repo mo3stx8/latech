@@ -37,6 +37,7 @@ dependencies:
   icons_plus: ^5.0.0
   provider: ^6.1.5+1
   material_symbols_icons: ^4.2874.0
+  smooth_page_indicator: ^1.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
