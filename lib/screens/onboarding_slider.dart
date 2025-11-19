@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latech/screens/loginScreen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:latech/screens/sign_up.dart';
 import 'package:latech/screens/log_in.dart';

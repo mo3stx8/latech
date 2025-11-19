@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:latech/screens/lets_start.dart';
 import 'package:flutter/material.dart';
 import 'package:latech/screens/onboarding_slider.dart';
 // استدعاء الشاشة اللي تبي تفتح بعدها
