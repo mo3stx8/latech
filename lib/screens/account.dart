@@ -64,7 +64,7 @@ class _AccountPageState extends State<AccountPage> {
                       textBaseline: TextBaseline.alphabetic,
                       children: [
                         Text(
-                          'James Warden',
+                          'Aogolo',
                           style: TextStyle(
                             color: Color(0xFF0A1034),
                             fontSize: 24.0,

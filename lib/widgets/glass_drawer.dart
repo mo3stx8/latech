@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:latech/screens/account.dart';
 import 'package:latech/screens/home.dart';
-import 'package:latech/screens/loginScreen.dart';
+import 'package:latech/screens/log_in.dart';
 
 class GlassDrawer extends StatelessWidget {
   const GlassDrawer({super.key});
@@ -40,7 +40,7 @@ class GlassDrawer extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'Mosta',
+                    'Aogolo',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
@@ -69,14 +69,14 @@ class GlassDrawer extends StatelessWidget {
                         _drawerItem(
                           icon: Icons.settings_outlined,
                           text: 'Settings',
-                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Home())),
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AccountPage())),
                         ),
                         _drawerItem(
                           icon: Icons.logout_outlined,
                           text: 'Logout',
                           onTap: () {
                             Navigator.of(context).pushAndRemoveUntil(
-                              MaterialPageRoute(builder: (context) => const LoginScreen()),
+                              MaterialPageRoute(builder: (context) => const LoginPage()),
                               (route) => false, // removes all previous routes
                             );
                           },

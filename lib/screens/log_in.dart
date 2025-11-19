@@ -26,9 +26,8 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: Stack(
           children: [
-            
             const Positioned(
-              top: 60,
+              top: 95,
               left: 0,
               right: 0,
               child: Center(
@@ -36,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                   'Login',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -46,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
             
             SingleChildScrollView(
               // ضبط الـ Padding لضمان أن الكونتينر يبدأ من نقطة مناسبة
-              padding: EdgeInsets.only(top: screenHeight * 0.25), 
+              padding: EdgeInsets.only(top: screenHeight * 0.30), 
               child: Container(
                 width: double.infinity,
                 // خلفية بيضاء للفورم
@@ -150,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
                             hintText: 'Enter your password',
                             hintStyle: const TextStyle(color: Colors.grey),
                             prefixIcon:
-                                const Icon(Icons.lock_outline_rounded, color: primaryColor),
+                                const Icon(Icons.lock_rounded, color: primaryColor),
                             filled: true,
                             fillColor: Colors.grey[100],
                             enabledBorder: OutlineInputBorder(
@@ -249,23 +248,7 @@ class _LoginPageState extends State<LoginPage> {
                           ],
                         ),
 
-                        const SizedBox(height: 40),
-
-                        // // ---------------- Page Indicator & Skip Button (تحريكها إلى أسفل الفورم) ----------------
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.center,
-                        //   children: const [
-                        //     Icon(Icons.circle, color: Colors.grey, size: 10),
-                        //     SizedBox(width: 4),
-                        //     Icon(Icons.circle, color: Colors.grey, size: 10),
-                        //     SizedBox(width: 4),
-                        //     Icon(Icons.circle, color: Colors.grey, size: 10),
-                        //     SizedBox(width: 4),
-                        //     Icon(Icons.circle, color: primaryColor, size: 12),
-                        //   ],
-                        // ),
-
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 60),
 
                         Center(
                           child: TextButton(
@@ -283,7 +266,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         
-                        const SizedBox(height: 50), // مسافة في نهاية الـ Scroll
+                        const SizedBox(height: 80), // مسافة في نهاية الـ Scroll
 
                       ],
                     ),

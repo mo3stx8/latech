@@ -141,6 +141,18 @@ class _ProductPageState extends State<ProductPage> {
               ],
             ),
 
+            const SizedBox(height: 25),
+
+            // ✅ Discription
+            const Text(
+              "Discription",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            const Text(
+              "The latest MacBook Pro is the 14-inch model powered by the M5 chip, featuring a 10-core CPU, 10-core GPU, and unified memory starting at 16 GB and going up to 32 GB, with fast SSD storage options reaching 4 TB. It includes a Liquid Retina XDR display with high resolution, 120 Hz ProMotion, and exceptional HDR brightness, along with long battery life of up to 24 hours. The device also offers versatile connectivity with Thunderbolt 4 ports, HDMI, an SDXC slot, and MagSafe 3 charging for a flexible and powerful workstation.",
+              style: TextStyle(fontSize: 14),
+            ),
+
             const Spacer(),
 
             // ✅ Add to cart button

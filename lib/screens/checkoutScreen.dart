@@ -63,7 +63,7 @@ class CheckoutScreen extends StatelessWidget {
                 style: TextStyle(color: Color(0xffA7A9BE), fontSize: 12),
               ),
               Text(
-                '------------------------------------------------------------------------------------------------------------',
+                '--------------------------------------------------------------------------------------------------------',
                 style: TextStyle(color: Colors.grey,),
               ),
               const SizedBox(height: 10),
@@ -82,7 +82,7 @@ class CheckoutScreen extends StatelessWidget {
                 style: TextStyle(color: Color(0xffA7A9BE), fontSize: 12),
               ),
               Text(
-                '------------------------------------------------------------------------------------------------------------',
+                '--------------------------------------------------------------------------------------------------------',
                 style: TextStyle(
                   color: Colors.grey,//. withOpacity(0.20),
                 ),
@@ -107,8 +107,8 @@ class CheckoutScreen extends StatelessWidget {
                       fontSize: 12,
                     ),
                   ),
-        
-              const SizedBox(height: 20),
+
+              const SizedBox(height: 220),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(

@@ -31,7 +31,7 @@ class _SignUpState extends State<SignUp> {
           children: [
             // النص الرئيسي "Create an account" في الأعلى
             const Positioned(
-              top: 60,
+              top: 75,
               left: 0,
               right: 0,
               child: Center(
@@ -39,7 +39,7 @@ class _SignUpState extends State<SignUp> {
                   'Create an account',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -159,7 +159,7 @@ class _SignUpState extends State<SignUp> {
                           style: const TextStyle(color: Colors.black),
                           decoration: _inputDecoration(
                             hintText: 'Enter your password',
-                            icon: Icons.lock_outline_rounded,
+                            icon: Icons.lock_rounded,
                             primaryColor: primaryColor,
                           ),
                           validator: (value) {
@@ -249,22 +249,6 @@ class _SignUpState extends State<SignUp> {
                         ),
 
                         const SizedBox(height: 40),
-
-                        // // ---------------- Page Indicator & Skip Button ----------------
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.center,
-                        //   children: [
-                        //     const Icon(Icons.circle, color: Colors.grey, size: 10),
-                        //     const SizedBox(width: 4),
-                        //     const Icon(Icons.circle, color: Colors.grey, size: 10),
-                        //     const SizedBox(width: 4),
-                        //     const Icon(Icons.circle, color: primaryColor, size: 12),
-                        //     const SizedBox(width: 4),
-                        //     const Icon(Icons.circle, color: Colors.grey, size: 10),
-                        //   ],
-                        // ),
-
-                        const SizedBox(height: 20),
 
                         Center(
                           child: TextButton(

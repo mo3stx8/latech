@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:latech/screens/categories.dart';
 import 'package:latech/screens/laptopApp.dart';
+import 'package:latech/screens/productPage.dart';
 import 'package:latech/widgets/custom_bottom_nav.dart';
 import 'package:latech/widgets/glass_drawer.dart';
 
 class Home extends StatefulWidget {
-  const Home ({super.key});
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
@@ -18,23 +20,23 @@ class _HomeState extends State<Home> {
     {
       "title": "Bose Home Speaker",
       "subtitle": "JDC 279",
-      "image": "assets/images/Bosespeaker.png"
+      "image": "assets/images/Bosespeaker.png",
     },
     {
-      "title": "Sony Headphones",
-      "subtitle": "ZX 990",
-      "image": "assets/images/Bosespeaker.png"
+      "title": "Intel CPU",
+      "subtitle": "Pantium",
+      "image": "assets/images/cpu.png",
     },
     {
-      "title": "JBL Portable",
-      "subtitle": "Go 3",
-      "image": "assets/images/Bosespeaker.png"
+      "title": "Pixelbook",
+      "subtitle": "Google",
+      "image": "assets/images/Pixelbook.png",
     },
     {
-      "title": "JBL Portable",
-      "subtitle": "Go 3",
-      "image": "assets/images/Bosespeaker.png"
-    }
+      "title": "RTX 5090",
+      "subtitle": "Nvidia",
+      "image": "assets/images/rtx.png",
+    },
   ];
 
   @override
@@ -47,9 +49,9 @@ class _HomeState extends State<Home> {
         title: Text("Home"),
         backgroundColor: const Color(0xffFDFEFF),
         titleTextStyle: TextStyle(
-          fontSize: 32, 
+          fontSize: 32,
           color: Colors.black,
-          fontWeight:FontWeight.bold,
+          fontWeight: FontWeight.bold,
         ),
 
         actions: [
@@ -103,24 +105,23 @@ class _HomeState extends State<Home> {
                             Text(
                               banner["title"]!,
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold),
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                             SizedBox(height: 4),
                             Text(
                               banner["subtitle"]!,
                               style: TextStyle(
-                                  color: Colors.white70, fontSize: 14),
+                                color: Colors.white70,
+                                fontSize: 14,
+                              ),
                             ),
                           ],
                         ),
                         // photo
-                        Image.asset(
-                          banner["image"]!,
-                          height: 80,
-                          width: 60,
-                        ),
+                        Image.asset(banner["image"]!, height: 80, width: 60),
                       ],
                     ),
                   );
@@ -137,7 +138,7 @@ class _HomeState extends State<Home> {
                   margin: EdgeInsets.symmetric(horizontal: 4),
                   child: Icon(
                     Icons.circle,
-                    size: 10,
+                    size: 8,
                     color: currentIndex == index
                         ? Colors.blue
                         : Colors.grey, // اللون يتغير حسب السلايد
@@ -162,7 +163,12 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
                           // هنا تضع الكود للانتقال مثلاً:
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Categories()));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Categories(),
+                            ),
+                          );
                         },
                         child: Container(
                           padding: EdgeInsets.all(10),
@@ -170,8 +176,11 @@ class _HomeState extends State<Home> {
                             color: Color(0xFFEFF5FB),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.category,
-                              size: 30, color: Colors.black),
+                          child: Icon(
+                            Icons.category,
+                            size: 30,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(height: 4),
@@ -187,8 +196,7 @@ class _HomeState extends State<Home> {
                       InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-                        
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Favorites()));
+                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Favorites()))
                         },
                         child: Container(
                           padding: EdgeInsets.all(10),
@@ -196,8 +204,11 @@ class _HomeState extends State<Home> {
                             color: Color(0xFFEFF5FB),
                             shape: BoxShape.circle,
                           ),
-                          child:
-                              Icon(Icons.star, size: 30, color: Colors.black),
+                          child: Icon(
+                            Icons.star,
+                            size: 30,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(height: 4),
@@ -213,7 +224,6 @@ class _HomeState extends State<Home> {
                       InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-                        
                           // Navigator.push(context, MaterialPageRoute(builder: (context) => GiftsPage()));
                         },
                         child: Container(
@@ -222,8 +232,11 @@ class _HomeState extends State<Home> {
                             color: Color(0xFFEFF5FB),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.card_giftcard,
-                              size: 30, color: Colors.black),
+                          child: Icon(
+                            Icons.card_giftcard,
+                            size: 30,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(height: 4),
@@ -239,7 +252,6 @@ class _HomeState extends State<Home> {
                       InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-                        
                           // Navigator.push(context, MaterialPageRoute(builder: (context) => BestSellingPage()));
                         },
                         child: Container(
@@ -248,8 +260,11 @@ class _HomeState extends State<Home> {
                             color: Color(0xFFEFF5FB),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.trending_up,
-                              size: 30, color: Colors.black),
+                          child: Icon(
+                            Icons.trending_up,
+                            size: 30,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(height: 4),
@@ -265,7 +280,12 @@ class _HomeState extends State<Home> {
                       InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => LaptopApp()));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LaptopApp(),
+                            ),
+                          );
                         },
                         child: Container(
                           padding: EdgeInsets.all(10),
@@ -273,8 +293,11 @@ class _HomeState extends State<Home> {
                             color: Color(0xFFEFF5FB),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.computer,
-                              size: 30, color: Colors.black),
+                          child: Icon(
+                            Icons.computer,
+                            size: 30,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(height: 4),
@@ -290,7 +313,6 @@ class _HomeState extends State<Home> {
                       InkWell(
                         borderRadius: BorderRadius.circular(50),
                         onTap: () {
-                        
                           // Navigator.push(context, MaterialPageRoute(builder: (context) => MobilesPage()));
                         },
                         child: Container(
@@ -299,8 +321,11 @@ class _HomeState extends State<Home> {
                             color: Color(0xFFEFF5FB),
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.phone_iphone,
-                              size: 30, color: Colors.black),
+                          child: Icon(
+                            Icons.phone_iphone,
+                            size: 30,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                       SizedBox(height: 4),
@@ -328,230 +353,277 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: 166,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFFFF),
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                Colors.grey.withOpacity(0.4), //light shadow
-                            spreadRadius: 0.03, // shadow spread around card
-                            blurRadius: 0.01, // shadow softness
-                            offset: Offset(0, 0), // in center all side
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductPage(),
                           ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 2, right: 130),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE0ECF8),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(3)),
+                        );
+                      },
+                      child: Container(
+                        width: 166,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(
+                                0.4,
+                              ), //light shadow
+                              spreadRadius: 0.03, // shadow spread around card
+                              blurRadius: 0.01, // shadow softness
+                              offset: Offset(0, 0), // in center all side
                             ),
-                            alignment: AlignmentDirectional.topStart,
-                            width: 30,
-                            child: Text(
-                              "-50%",
-                              style: TextStyle(
-                                color: const Color.fromARGB(255, 49, 48, 48),
-                                fontSize: 12,
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 3, right: 130),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFE0ECF8),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(3),
+                                ),
+                              ),
+                              alignment: AlignmentDirectional.topStart,
+                              width: 30,
+                              child: Text(
+                                "-50%",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(255, 49, 48, 48),
+                                  fontSize: 12,
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 10),
-                            child: Image.asset(
-                              "assets/images/Monitor.png",
-                              height: 140,
-                              fit: BoxFit.cover,
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              child: Image.asset(
+                                "assets/images/Monitor.png",
+                                height: 140,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Text(
-                              "Monitors",
-                              style: TextStyle(fontSize: 16),
+                            Container(
+                              padding: EdgeInsets.only(top: 20),
+                              child: Text(
+                                "Monitors",
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 166,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFFFF),
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                Colors.grey.withOpacity(0.4), //light shadow
-                            spreadRadius: 0.03, // shadow spread around card
-                            blurRadius: 0.01, // shadow softness
-                            offset: Offset(0, 0), // in center all side
+
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductPage(),
                           ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 2, right: 130),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE0ECF8),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(3)),
+                        );
+                      },
+                      child: Container(
+                        width: 166,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(
+                                0.4,
+                              ), //light shadow
+                              spreadRadius: 0.03, // shadow spread around card
+                              blurRadius: 0.01, // shadow softness
+                              offset: Offset(0, 0), // in center all side
                             ),
-                            alignment: AlignmentDirectional.topStart,
-                            width: 30,
-                            child: Text(
-                              "-50%",
-                              style: TextStyle(
-                                color: const Color.fromARGB(255, 49, 48, 48),
-                                fontSize: 12,
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 3, right: 130),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFE0ECF8),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(3),
+                                ),
+                              ),
+                              alignment: AlignmentDirectional.topStart,
+                              width: 30,
+                              child: Text(
+                                "-30%",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(255, 49, 48, 48),
+                                  fontSize: 12,
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 10),
-                            child: Image.asset(
-                              "assets/images/Monitor.png",
-                              height: 140,
-                              fit: BoxFit.cover,
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              child: Image.asset(
+                                "assets/images/Macbook.png",
+                                height: 140,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Text(
-                              "Monitors",
-                              style: TextStyle(fontSize: 16),
+                            Container(
+                              padding: EdgeInsets.only(top: 20),
+                              child: Text(
+                                "Macbook",
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+                SizedBox(height: 20),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      width: 166,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFFFF),
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                Colors.grey.withOpacity(0.4), //light shadow
-                            spreadRadius: 0.03, // shadow spread around card
-                            blurRadius: 0.01, //shadow softness
-                            offset: Offset(0, 0), // in center all side
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductPage(),
                           ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 2, right: 130),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE0ECF8),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(3)),
+                        );
+                      },
+                      child: Container(
+                        width: 166,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(
+                                0.4,
+                              ), //light shadow
+                              spreadRadius: 0.03, // shadow spread around card
+                              blurRadius: 0.01, //shadow softness
+                              offset: Offset(0, 0), // in center all side
                             ),
-                            alignment: AlignmentDirectional.topStart,
-                            width: 30,
-                            child: Text(
-                              "-50%",
-                              style: TextStyle(
-                                color: const Color.fromARGB(255, 49, 48, 48),
-                                fontSize: 12,
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 3, right: 130),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFE0ECF8),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(3),
+                                ),
+                              ),
+                              alignment: AlignmentDirectional.topStart,
+                              width: 30,
+                              child: Text(
+                                "-20%",
+                                style: TextStyle(
+                                  color: const Color.fromARGB(255, 49, 48, 48),
+                                  fontSize: 12,
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 10),
-                            child: Image.asset(
-                              "assets/images/Monitor.png",
-                              height: 140,
-                              fit: BoxFit.cover,
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              child: Image.asset(
+                                "assets/images/usb.png",
+                                height: 140,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Text(
-                              "Monitors",
-                              style: TextStyle(fontSize: 16),
+                            Container(
+                              padding: EdgeInsets.only(top: 20),
+                              child: Text(
+                                "120W Charger",
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 166,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFFFF),
-                        borderRadius: BorderRadius.circular(8),
-                        boxShadow: [
-                          BoxShadow(
-                            color:
-                                Colors.grey.withOpacity(0.4), // light shadow
-                            spreadRadius: 0.03, // shadow spread around the card                          
-                            blurRadius: 0.01, // shadow softness
-                            offset: Offset(0, 0), // in center all sides                          
+
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductPage(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 166,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.4),
+                              spreadRadius: 0.03,
+                              blurRadius: 0.01,
+                              offset: Offset(0, 0),
                             ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 2, right: 130),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE0ECF8),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(3)),
-                            ),
-                            alignment: AlignmentDirectional.topStart,
-                            width: 30,
-                            child: Text(
-                              "-50%",
-                              style: TextStyle(
-                                color: const Color.fromARGB(255, 49, 48, 48),
-                                fontSize: 12,
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 3, right: 130),
+                              decoration: BoxDecoration(
+                                color: Color(0xFFE0ECF8),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(3),
+                                ),
+                              ),
+                              alignment: AlignmentDirectional.topStart,
+                              width: 30,
+                              child: Text(
+                                "-70%",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 49, 48, 48),
+                                  fontSize: 12,
+                                ),
                               ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 10),
-                            child: Image.asset(
-                              "assets/images/Monitor.png",
-                              height: 140,
-                              fit: BoxFit.cover,
+                            Container(
+                              padding: EdgeInsets.only(top: 10),
+                              child: Image.asset(
+                                "assets/images/rtx.jpeg",
+                                height: 140,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 20),
-                            child: Text(
-                              "Monitors",
-                              style: TextStyle(fontSize: 16),
+                            Container(
+                              padding: EdgeInsets.only(top: 20),
+                              child: Text(
+                                "RTX 5090",
+                                style: TextStyle(fontSize: 16),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

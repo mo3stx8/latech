@@ -52,7 +52,7 @@ class _OnboardingSliderState extends State<OnboardingSlider> {
                         ),
                       ),
 
-                      // ⭐ NEW: Skip jumps to PAGE 5 ⭐
+                      // ⭐ Skip jumps to PAGE 5 ⭐
                       TextButton(
                         onPressed: () {
                           _controller.animateToPage(

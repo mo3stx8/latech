@@ -35,7 +35,7 @@ class _CategoriesState extends State<Categories> {
                 padding: const EdgeInsets.fromLTRB(20.48, 29, 0, 0),
                 child: Icon(
                   Icons.arrow_back,
-                  size: 40,
+                  size: 30,
                   color: Color(0xFF0A1034),
                 ),
               ),
@@ -57,7 +57,7 @@ class _CategoriesState extends State<Categories> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 25, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 25, 16.33, 0),
                       child: Container(
                         height: 77,
                         width: 375,
@@ -78,7 +78,7 @@ class _CategoriesState extends State<Categories> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 16, 16.33, 0),
                       child: GestureDetector(
                         onTap: (){
                           Navigator.push(
@@ -107,7 +107,7 @@ class _CategoriesState extends State<Categories> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 16, 16.33, 0),
                       child: Container(
                         height: 77,
                         width: 375,
@@ -128,7 +128,7 @@ class _CategoriesState extends State<Categories> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 16, 16.33, 0),
                       child: Container(
                         height: 77,
                         width: 375,
@@ -149,7 +149,7 @@ class _CategoriesState extends State<Categories> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 16, 16.33, 0),
                       child: Container(
                         height: 77,
                         width: 375,
@@ -170,7 +170,7 @@ class _CategoriesState extends State<Categories> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 16, 16.33, 0),
                       child: Container(
                         height: 77,
                         width: 375,
@@ -191,7 +191,7 @@ class _CategoriesState extends State<Categories> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16.33, 16, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(16.33, 16, 16.33, 0),
                       child: Container(
                         height: 77,
                         width: 375,
