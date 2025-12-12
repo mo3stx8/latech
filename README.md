@@ -152,3 +152,7 @@ Please ensure your code is clean, documented, and tested.
 This project is licensed under the MIT License, a permissive and developer-friendly license.
 Thanks for exploring LaTech!
 Build fast. Build clean. Build beautifully. 🚀
+
+## 🤝Developed By:
+- **Aogolo**
+
