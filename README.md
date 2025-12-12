@@ -129,7 +129,7 @@ flutter test
 ```
 Add unit tests, widget tests, or integration tests to keep the app stable as it grows.
 
-💬 Contributing
+## 💬 Contributing
 
 Contributions are welcome! 💙
 
@@ -147,7 +147,9 @@ Open a Pull Request
 
 Please ensure your code is clean, documented, and tested.
 
-📄 License:
+If you have any ideas to make it more interesting, [please send a DM me at mostafasa7754@gmail.com](mailto:mostafasa7754@gmail.com) or Call me:+967774316974.
+
+## 📄 License:
 
 This project is licensed under the MIT License, a permissive and developer-friendly license.
 Thanks for exploring LaTech!
